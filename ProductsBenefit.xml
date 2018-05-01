@@ -1,0 +1,2471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="58de47f6-12b3-4ca5-b85c-9fdb784560c2" created="2.3.0" activeEnvironment="Default environment" name="OAG API" resourceRoot="${projectDir}" updated="2.3.0 2018-03-06T16:28:42Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="a22a2a66-91ea-4a2e-a566-7777e1c469a1" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="IAM Tokens" path="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" id="26823dbc-b7a3-42b2-9f8b-cef43ba5a98a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="RequestToken" id="fba658b0-b8e4-44c5-a400-3f925b3fda53" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400 500</con:status>
+          <con:params/>
+          <con:element xmlns:tok="https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens">tok:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:tok="https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens">tok:Response</con:element>
+        </con:representation>
+        <con:request name="DEV" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+          <con:request>grant_type=client_credentials&amp;scope=SOV.Adviser.ValidateEmail</con:request>
+          <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+          <con:credentials>
+            <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+            <con:password>2C449kwEGO</con:password>
+            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+            <con:preemptive>true</con:preemptive>
+            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+            <con:authType>Preemptive</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="69113b50-26af-4c32-9a54-9d0f82e48e07" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service API" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+      <con:endpoint>https://api.fst.sovcloud.sovereign.co.nz</con:endpoint>
+      <con:endpoint>https://api.qa.sovcloud.sovereign.co.nz</con:endpoint>
+      <con:endpoint>https://api.sovcloud.sovereign.co.nz</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Endpoints" path="/quote" id="676fa4c2-8904-471d-8972-6eafb072203d">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="products" path="v1/products" id="33f559d1-a78d-4cfc-a6c6-fca77f4dfc08">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Products Benefits" id="1927d993-0ea6-4b84-bf3e-262c92ed1c46" method="POST">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html</con:mediaType>
+            <con:status>403</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>401 500 504</con:status>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:prod="https://ext-intoagd-api.sovereign.co.nz/quote/v1/products">prod:Response</con:element>
+          </con:representation>
+          <con:request name="DEV" id="f25fc231-4f07-4ce6-8b83-637e6f7b78f8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "12374",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John30",
+            "LastName": "Doe30",
+            "Age": "64",
+            "BirthDate": "${=new java.text.SimpleDateFormat('dd/MM/YY').format(new Date())}",
+            "SmokerStatus": "NS",
+            "Gender": "M",
+            "OccupationClass": "30",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "false"
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:request>
+          <con:request name="FST" id="afc69cc6-c929-4e1e-92b7-6cdb924c2a41" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.fst.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "",
+          "Party": {
+            "FirstName": "",
+            "LastName": "",
+            "Age": "",
+            "BirthDate": "",
+            "SmokerStatus": "",
+            "Gender": "",
+            "OccupationClass": "",
+            "EmploymentStatus": "",
+            "selfEmployedGT3Years": ""
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.fst.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="QA" id="ba314743-351c-418f-b882-3d222bae58f9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.qa.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.qa.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="PROD" id="d33b750f-31de-4f60-96f1-28d02a26360e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="TEST" id="3bca363d-8388-4a88-9678-b2339be5a0b3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://ext-intoagd-api.sovereign.co.nz:443</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "12345",
+    "PartyRolesInQuote": [
+                {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Age": "35",
+            "BirthDate": "27/03/18",
+            "SmokerStatus": "NS",
+            "Gender": "M",
+            "OccupationClass": "1",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "false"
+          }
+        }
+      }
+                  },
+                   {"PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Age": "35",
+            "BirthDate": "27/03/18",
+            "SmokerStatus": "NS",
+            "Gender": "M",
+            "OccupationClass": "1",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "false"
+          }
+        }
+      }
+                  }
+    ]
+  }
+}</con:request>
+            <con:originalUri>https://ext-intoagd-api.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:credentials>
+              <con:username>WeiH</con:username>
+              <con:password>Cloudinit1</con:password>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:preemptive>false</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="premium" path="v1/calculate/premium" id="279d05a2-c723-40c1-8de5-32a5915b69ea">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Calculate Premium" id="2fb27ee0-b824-4746-b0c9-5b38d71aa3fb" method="POST">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html</con:mediaType>
+            <con:status>403</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:prem="https://api.dev.sovcloud.sovereign.co.nz/quote/v1/calculate/premium">prem:Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>401 504</con:status>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request name="DEV" id="7f6ea87f-9b56-486f-bba2-6b5792e1b16f" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "12345",
+    "PaymentFrequency": "Weekly",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John",
+            "LastName": "DOE",
+            "Age": "12",
+            "BirthDate": "01/05/18",
+            "SmokerStatus": "No",
+            "Gender": "Male",
+            "OccupationClass": "1",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "true"
+          }
+        },
+        "Products": {
+          "Product": {
+            "ProductName": "TotalCare Max Personal",
+            "ProductCode": "TCMP",
+            "Channel": "SOVHUB",
+            "ProductBenefits": {
+              "ProductBenefit": {
+                "BenefitName": "Life Cover",
+                "PremiumOption": "10 Year",
+                "SumAssured": "791269",
+                "ReviewTerm": "10",
+                "Load": "100.0",
+                "BenefitCode": "LIFE",
+                "BenefitType": "Life",
+                "LoadingPerMille": "3",
+                "LoadingTerm": "5",
+                "isIndexed": "No",
+                "CommissionFactor": "0.5"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/calculate/premium</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="FST" id="ac62abef-ea60-4454-bf4e-db4316bf1332" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.fst.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "12374",
+    "PaymentFrequency": "Weekly",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John30",
+            "LastName": "Doe30",
+            "Age": "64",
+            "BirthDate": "4/25/83",
+            "SmokerStatus": "false",
+            "Gender": "Male",
+            "OccupationClass": "30",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "false"
+          }
+        },
+        "Products": {
+          "Product": {
+            "ProductName": "TotalCare Max Personal",
+            "ProductCode": "TCMP",
+            "Channel": "SOVHUB",
+            "ProductBenefits": {
+              "ProductBenefit": {
+                "BenefitName": "Life Cover",
+                "PremiumOption": "Rate for Age",
+                "SumAssured": "300000",
+                "ReviewTerm": "10",
+                "Load": "1000",
+                "BenefitCode": "LC",
+                "BenefitType": "Life",
+                "LoadingPerMille": "0.1",
+                "LoadingTerm": "1",
+                "isIndexed": "true",
+                "CommissionFactor": "0.7"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.fst.sovcloud.sovereign.co.nz/quote/v1/calculate/premium</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="QA" id="4f5a4829-855e-485f-ba1f-67dd2e502af5" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.qa.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="PROD" id="5acfe3f8-31e0-4c0b-b08c-f64324277526" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.sovcloud.sovereign.co.nz/quote/v1/calculate/premium</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+          <con:request name="TEST" id="4460680e-6dc3-4d95-af50-5ef350c77a08" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://ext-intoagd-api.sovereign.co.nz:443</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "12345",
+    "PaymentFrequency": "Monthly",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "1",
+          "Party": {
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Age": "35",
+            "BirthDate": "27/03/18",
+            "SmokerStatus": "false",
+            "Gender": "Male",
+            "OccupationClass": "1",
+            "EmploymentStatus": "Employed",
+            "selfEmployedGT3Years": "false"
+          }
+        },
+        "Products": {
+          "Product": {
+            "ProductName": "TotalCare Max Personal",
+            "ProductCode": "TCMP",
+            "Channel": "SOVHUB",
+            "ProductBenefits": {
+              "ProductBenefit": {
+                "BenefitName": "Life Cover",
+                "PremiumOption": "Rate for Age",
+                "SumAssured": "300000",
+                "ReviewTerm": "10",
+                "Load": "1000",
+                "BenefitCode": "LC",
+                "BenefitType": "Life",
+                "LoadingPerMille": "0.1",
+                "LoadingTerm": "1",
+                "isIndexed": "false",
+                "CommissionFactor": "0.7"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://ext-intoagd-api.sovereign.co.nz/quote/v1/calculate/premium</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>authProfile</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="abc79d0d-1193-4bea-9da4-9eb9cfb9b4f6" wsaVersion="NONE" name="airlinesServicePortBinding" type="wsdl" bindingName="{http://v1.airlines.cache.conducivetech.com/}airlinesServicePortBinding" soapVersion="1_1" anonymous="optional" definition="https://api.flightstats.com/flex/airlines/docs/v1/lts/soap/airlinesService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="https://api.flightstats.com/flex/airlines/docs/v1/lts/soap/airlinesService.wsdl">
+      <con:part>
+        <con:url>https://api.flightstats.com/flex/airlines/docs/v1/lts/soap/airlinesService.wsdl</con:url>
+        <con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2.-->
+<!--Generated by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2.-->
+<definitions targetNamespace="http://v1.airlines.cache.conducivetech.com/" name="AirlinesV1SoapService" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://v1.airlines.cache.conducivetech.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://v1.airlines.cache.conducivetech.com/" schemaLocation="https://api.flightstats.com/flex/airlines/docs/v1/lts/soap/airlinesService.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="allAirlines">
+    <part name="parameters" element="tns:allAirlines"/>
+  </message>
+  <message name="allAirlinesResponse">
+    <part name="parameters" element="tns:allAirlinesResponse"/>
+  </message>
+  <message name="APIException">
+    <part name="fault" element="tns:APIException"/>
+  </message>
+  <message name="airlines">
+    <part name="parameters" element="tns:airlines"/>
+  </message>
+  <message name="airlinesResponse">
+    <part name="parameters" element="tns:airlinesResponse"/>
+  </message>
+  <message name="currentAirlines">
+    <part name="parameters" element="tns:currentAirlines"/>
+  </message>
+  <message name="currentAirlinesResponse">
+    <part name="parameters" element="tns:currentAirlinesResponse"/>
+  </message>
+  <message name="airlineByIcao">
+    <part name="parameters" element="tns:airlineByIcao"/>
+  </message>
+  <message name="airlineByIcaoResponse">
+    <part name="parameters" element="tns:airlineByIcaoResponse"/>
+  </message>
+  <message name="airlineByFsCode">
+    <part name="parameters" element="tns:airlineByFsCode"/>
+  </message>
+  <message name="airlineByFsCodeResponse">
+    <part name="parameters" element="tns:airlineByFsCodeResponse"/>
+  </message>
+  <message name="airlinesByIata">
+    <part name="parameters" element="tns:airlinesByIata"/>
+  </message>
+  <message name="airlinesByIataResponse">
+    <part name="parameters" element="tns:airlinesByIataResponse"/>
+  </message>
+  <message name="airlinesByIataForDate">
+    <part name="parameters" element="tns:airlinesByIataForDate"/>
+  </message>
+  <message name="airlinesByIataForDateResponse">
+    <part name="parameters" element="tns:airlinesByIataForDateResponse"/>
+  </message>
+  <message name="airlinesByIcao">
+    <part name="parameters" element="tns:airlinesByIcao"/>
+  </message>
+  <message name="airlinesByIcaoResponse">
+    <part name="parameters" element="tns:airlinesByIcaoResponse"/>
+  </message>
+  <portType name="airlinesService">
+    <operation name="allAirlines">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/allAirlinesRequest" message="tns:allAirlines"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/allAirlinesResponse" message="tns:allAirlinesResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/allAirlines/Fault/APIException"/>
+    </operation>
+    <operation name="airlines">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesRequest" message="tns:airlines"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesResponse" message="tns:airlinesResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlines/Fault/APIException"/>
+    </operation>
+    <operation name="currentAirlines">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/currentAirlinesRequest" message="tns:currentAirlines"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/currentAirlinesResponse" message="tns:currentAirlinesResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/currentAirlines/Fault/APIException"/>
+    </operation>
+    <operation name="airlineByIcao">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByIcaoRequest" message="tns:airlineByIcao"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByIcaoResponse" message="tns:airlineByIcaoResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByIcao/Fault/APIException"/>
+    </operation>
+    <operation name="airlineByFsCode">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByFsCodeRequest" message="tns:airlineByFsCode"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByFsCodeResponse" message="tns:airlineByFsCodeResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByFsCode/Fault/APIException"/>
+    </operation>
+    <operation name="airlinesByIata">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataRequest" message="tns:airlinesByIata"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataResponse" message="tns:airlinesByIataResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIata/Fault/APIException"/>
+    </operation>
+    <operation name="airlinesByIataForDate">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataForDateRequest" message="tns:airlinesByIataForDate"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataForDateResponse" message="tns:airlinesByIataForDateResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataForDate/Fault/APIException"/>
+    </operation>
+    <operation name="airlinesByIcao">
+      <input wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIcaoRequest" message="tns:airlinesByIcao"/>
+      <output wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIcaoResponse" message="tns:airlinesByIcaoResponse"/>
+      <fault message="tns:APIException" name="APIException" wsam:Action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIcao/Fault/APIException"/>
+    </operation>
+  </portType>
+  <binding name="airlinesServicePortBinding" type="tns:airlinesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="allAirlines">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlines">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="currentAirlines">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlineByIcao">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlineByFsCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlinesByIata">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlinesByIataForDate">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="airlinesByIcao">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="APIException">
+        <soap:fault name="APIException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="AirlinesV1SoapService">
+    <port name="airlinesServicePort" binding="tns:airlinesServicePortBinding">
+      <soap:address location="https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService"/>
+    </port>
+  </service>
+</definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>https://api.flightstats.com/flex/airlines/docs/v1/lts/soap/airlinesService.xsd</con:url>
+        <con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2.-->
+<xs:schema version="1.0" targetNamespace="http://v1.airlines.cache.conducivetech.com/" xmlns:tns="http://v1.airlines.cache.conducivetech.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="APIException" type="tns:APIException"/>
+  <xs:element name="airline" type="tns:airlineV1"/>
+  <xs:element name="airlineByFsCode" type="tns:airlineByFsCode"/>
+  <xs:element name="airlineByFsCodeResponse" type="tns:airlineByFsCodeResponse"/>
+  <xs:element name="airlineByIcao" type="tns:airlineByIcao"/>
+  <xs:element name="airlineByIcaoResponse" type="tns:airlineByIcaoResponse"/>
+  <xs:element name="airlines" type="tns:airlines"/>
+  <xs:element name="airlinesByIata" type="tns:airlinesByIata"/>
+  <xs:element name="airlinesByIataForDate" type="tns:airlinesByIataForDate"/>
+  <xs:element name="airlinesByIataForDateResponse" type="tns:airlinesByIataForDateResponse"/>
+  <xs:element name="airlinesByIataResponse" type="tns:airlinesByIataResponse"/>
+  <xs:element name="airlinesByIcao" type="tns:airlinesByIcao"/>
+  <xs:element name="airlinesByIcaoResponse" type="tns:airlinesByIcaoResponse"/>
+  <xs:element name="airlinesResponse" type="tns:airlinesResponse"/>
+  <xs:element name="allAirlines" type="tns:allAirlines"/>
+  <xs:element name="allAirlinesResponse" type="tns:allAirlinesResponse"/>
+  <xs:element name="currentAirlines" type="tns:currentAirlines"/>
+  <xs:element name="currentAirlinesResponse" type="tns:currentAirlinesResponse"/>
+  <xs:complexType name="airlinesByIcao">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="icaoCode" type="xs:string"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesByIcaoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlineV1">
+    <xs:sequence>
+      <xs:element name="fs" type="xs:string"/>
+      <xs:element name="iata" type="xs:string" minOccurs="0"/>
+      <xs:element name="icao" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="active" type="xs:boolean"/>
+      <xs:element name="dateFrom" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateTo" type="xs:string" minOccurs="0"/>
+      <xs:element name="category" type="xs:unsignedShort" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="APIException">
+    <xs:sequence>
+      <xs:element name="httpStatusCode" type="xs:int"/>
+      <xs:element name="errorCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorId" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorMessage" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlineByFsCode">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlineByFsCodeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlineByIcao">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="icaoCode" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+      <xs:element name="month" type="xs:int"/>
+      <xs:element name="day" type="xs:int"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlineByIcaoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlines">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+      <xs:element name="month" type="xs:int"/>
+      <xs:element name="day" type="xs:int"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesByIataForDate">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="iataCode" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+      <xs:element name="month" type="xs:int"/>
+      <xs:element name="day" type="xs:int"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesByIataForDateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="currentAirlines">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="currentAirlinesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesByIata">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="iataCode" type="xs:string"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airlinesByIataResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="allAirlines">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string"/>
+      <xs:element name="appKey" type="xs:string"/>
+      <xs:element name="extendedOptions" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="allAirlinesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:airlineV1" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="0f73fadf-467a-4ae7-93e2-ac59989acb4b" isOneWay="false" action="" name="airlineByFsCode" bindingOperationName="airlineByFsCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="bb4ef399-f490-4dcb-9911-1429078163dc" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:airlineByFsCode>
+         <appId>?</appId>
+         <appKey>?</appKey>
+         <code>?</code>
+         <!--Optional:-->
+         <extendedOptions>?</extendedOptions>
+      </v1:airlineByFsCode>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByFsCodeRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="836e44f2-736a-4929-b7b2-7d1734212963" isOneWay="false" action="" name="airlineByIcao" bindingOperationName="airlineByIcao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="b37ba8aa-717f-4b2c-a384-92a1b1152d11" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:airlineByIcao>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <icaoCode>?</icaoCode>\r
+         <year>?</year>\r
+         <month>?</month>\r
+         <day>?</day>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:airlineByIcao>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlineByIcaoRequest"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="f614e909-bd08-47a4-a8f8-b2c37cb7b911" isOneWay="false" action="" name="airlines" bindingOperationName="airlines" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="4945356e-df21-4216-9b7c-35f4172e42c7" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:airlines>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <year>?</year>\r
+         <month>?</month>\r
+         <day>?</day>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:airlines>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="81f04679-b59e-4021-9177-1c9ea6460d06" isOneWay="false" action="" name="airlinesByIata" bindingOperationName="airlinesByIata" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="021673ea-6dfb-4951-b97b-ef96d781cf2f" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:airlinesByIata>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <iataCode>?</iataCode>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:airlinesByIata>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataRequest"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="6b3a0db3-20c3-4f75-8177-3acaa9c257ac" isOneWay="false" action="" name="airlinesByIataForDate" bindingOperationName="airlinesByIataForDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="d6e51865-479a-4496-a48e-607fb7100607" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:airlinesByIataForDate>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <iataCode>?</iataCode>\r
+         <year>?</year>\r
+         <month>?</month>\r
+         <day>?</day>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:airlinesByIataForDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIataForDateRequest"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="24b3c614-3ec9-4daf-b9bb-2f8cc2a1d797" isOneWay="false" action="" name="airlinesByIcao" bindingOperationName="airlinesByIcao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="5f2b4551-b54c-4934-a69a-12535d9c3171" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:airlinesByIcao>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <icaoCode>?</icaoCode>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:airlinesByIcao>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/airlinesByIcaoRequest"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="a31d34a2-050e-4f05-9f87-1b37cc1bb403" isOneWay="false" action="" name="allAirlines" bindingOperationName="allAirlines" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="9e005630-99c3-4894-bc40-a79af761e7ce" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:allAirlines>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:allAirlines>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/allAirlinesRequest"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="87020f70-6e8e-4a34-b0c6-85432dafdae0" isOneWay="false" action="" name="currentAirlines" bindingOperationName="currentAirlines" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="e3da8ca5-1831-4426-9ff5-8abaa6ef599d" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.flightstats.com:443/flex/airlines/soap/v1/airlinesService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://v1.airlines.cache.conducivetech.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:currentAirlines>\r
+         <appId>?</appId>\r
+         <appKey>?</appKey>\r
+         <!--Optional:-->\r
+         <extendedOptions>?</extendedOptions>\r
+      </v1:currentAirlines>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://v1.airlines.cache.conducivetech.com/airlinesService/currentAirlinesRequest"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="3a4a478a-5658-4e9b-a8ef-5e74d20ac1df" name="End-to-End">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="5024e92f-7195-4f1b-9296-81009cc874d5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Products-Benefits-CalculatePremium" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Given i request an access token" id="2979d739-e915-4730-ae7f-ca2b4fd2b29a">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Given i request an access token" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=client_credentials&amp;scope=${#TestCase#SCOPE}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="52e9ab2f-67ce-4043-8ace-7b73b1129dcc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="And i extract the token" id="ddd93388-12a3-4b8f-abfb-160f3814925b">
+        <con:settings/>
+        <con:config>
+          <script>def accessToken = context.expand('${Given i request an access token#Response#$.access_token}')
+def tokenType = context.expand( '${Given i request an access token#Response#$[\'token_type\']}' )
+testRunner.testCase.setPropertyValue("ACCESS_TOKEN", accessToken)
+testRunner.testCase.setPropertyValue("THEDATE", new Date().format('dd/MM/YY'))
+return tokenType + ' ' + accessToken</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="And the token is valid" id="c1e2082e-c3cb-4364-87be-74c461ef9ce2">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="And the token is valid" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=oracle-idm%3A%2Foauth%2Fgrant-type%2Fresource-access-token%2Fjwt&amp;oracle_token_action=validate&amp;scope=${#TestCase#SCOPE}&amp;assertion=${#TestCase#ACCESS_TOKEN}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="bf7717e8-d725-40e5-9ed7-98fea999cbcf" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="49949dbe-4baa-4c1e-930a-71ed8aa0c894" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$['successful']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="When i input a user's information" id="bd064a5b-5a83-40d7-b821-b7cc24b6cbdd">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>./Data/LIFE test cases FINAL - sent.xlsx</file>
+              <worksheet>LIFE</worksheet>
+              <cell>A4</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>Case</con:property>
+          <con:property>Quote Type</con:property>
+          <con:property>Duration</con:property>
+          <con:property>NA</con:property>
+          <con:property>Plan</con:property>
+          <con:property>Discount</con:property>
+          <con:property>Name</con:property>
+          <con:property>Age</con:property>
+          <con:property>Sex</con:property>
+          <con:property>Smoker</con:property>
+          <con:property>Occupation Class</con:property>
+          <con:property>Self Employed</con:property>
+          <con:property>Premium Frequency</con:property>
+          <con:property>Commission Adjustment</con:property>
+          <con:property>Policy Fee</con:property>
+          <con:property>Life Cover</con:property>
+          <con:property>Life - Type</con:property>
+          <con:property>Life - Indexing</con:property>
+          <con:property>Life - Premium Options</con:property>
+          <con:property>Life - Loading</con:property>
+          <con:property>Life - Loading per mille</con:property>
+          <con:property>Life - Loading term</con:property>
+          <con:property>Life - Future Insurability or Business Safeguard</con:property>
+          <con:property>Life - Business Safeguard Sum Assured</con:property>
+          <con:property>Family Protection Benefit (monthly)</con:property>
+          <con:property>FPB - Payment Options</con:property>
+          <con:property>FPB - Payment Term</con:property>
+          <con:property>FPB - Indexed</con:property>
+          <con:property>FPB - Premium Options</con:property>
+          <con:property>FPB - Loading</con:property>
+          <con:property>FPB - Per Mille Loading $</con:property>
+          <con:property>FPB - Per Mille Loading term</con:property>
+          <con:property>Essential LAB - Accel</con:property>
+          <con:property>Essential LA - Life Buyback</con:property>
+          <con:property>Essential LAB - SA</con:property>
+          <con:property>Essential LA - SA Index</con:property>
+          <con:property>Essential LA - Premium Options</con:property>
+          <con:property>Essential LA - Loading</con:property>
+          <con:property>Essential LA - Per Mille Loading $</con:property>
+          <con:property>Essential LA - Per Mille Loading term</con:property>
+          <con:property>Living Assurance - Accel</con:property>
+          <con:property>LAB - Life Buyback</con:property>
+          <con:property>LAB - LAB Buyback</con:property>
+          <con:property>LABL - TPD Rider</con:property>
+          <con:property>LABL - TPD Rider Loading</con:property>
+          <con:property>Living Assurance - SA</con:property>
+          <con:property>LAB - SA Index</con:property>
+          <con:property>LAB - Premium Options</con:property>
+          <con:property>LAB - Loading</con:property>
+          <con:property>LAB - Per Mille Loading $</con:property>
+          <con:property>LAB - Per Mille Loading term</con:property>
+          <con:property>LAB - Core Events benefit</con:property>
+          <con:property>LAB - Business Safeguard</con:property>
+          <con:property>LAB - Business Safeguard Sum Assured</con:property>
+          <con:property>LAB - Children's and Maternity Upgrade</con:property>
+          <con:property>LAB - Optional Cancer Upgrade</con:property>
+          <con:property>LAB - Cancer Upgrade Loading</con:property>
+          <con:property>LAB - Cancer Upgrade Per Mille Loading $</con:property>
+          <con:property>LAB - Cancer Upgrade Per Mille Loading term</con:property>
+          <con:property>SLAB - TPD Rider</con:property>
+          <con:property>SLAB - TPD Rider Loading</con:property>
+          <con:property>ProgressiveCare - Accel</con:property>
+          <con:property>SBA - TPD Rider</con:property>
+          <con:property>SBA - TPD Rider Loading</con:property>
+          <con:property>ProgressiveCare - SA</con:property>
+          <con:property>SB - SA Index</con:property>
+          <con:property>SB - Premium Options</con:property>
+          <con:property>SB - Loading</con:property>
+          <con:property>SB - Per Mille Loading $</con:property>
+          <con:property>SB - Per Mille Loading term</con:property>
+          <con:property>SB - Children's and Maternity Upgrade</con:property>
+          <con:property>SBS - TPD Rider</con:property>
+          <con:property>SBS - TPD Rider Loading</con:property>
+          <con:property>TPD Cover - Accel</con:property>
+          <con:property>TPDL - Expiry Age</con:property>
+          <con:property>TPD Cover - SA</con:property>
+          <con:property>TPD - Type</con:property>
+          <con:property>TPD - accel type</con:property>
+          <con:property>STPD - Expiry Age</con:property>
+          <con:property>TPD - SA Index</con:property>
+          <con:property>TPD - Premium Options</con:property>
+          <con:property>TPD - Loading</con:property>
+          <con:property>TPD - Per Mille Loading $</con:property>
+          <con:property>TPD - Per Mille Loading term</con:property>
+          <con:property>TPD - Business Safeguard</con:property>
+          <con:property>TPD - Business Safeguard Sum Assured</con:property>
+          <con:property>Accidental Death Benefit</con:property>
+          <con:property>AD - Indexed</con:property>
+          <con:property>AD - Premium Options</con:property>
+          <con:property>Passenger Accidental Death Benefit</con:property>
+          <con:property>Disability Income Benefit (annual)</con:property>
+          <con:property>DI - Benefit Payment Period</con:property>
+          <con:property>DI - Indexed</con:property>
+          <con:property>DI - Premium Options</con:property>
+          <con:property>DI - Loading</con:property>
+          <con:property>DI - Farmers benefit</con:property>
+          <con:property>DI - Cover Type (Agreed Value, Indemnity etc)</con:property>
+          <con:property>DI - Premier Option</con:property>
+          <con:property>DI - Waiting Period</con:property>
+          <con:property>DI - Child Care benefit - No. children</con:property>
+          <con:property>DI - youngest child's age</con:property>
+          <con:property>DI - Mental Health Limitation</con:property>
+          <con:property>DI - Redundancy Cover</con:property>
+          <con:property>Second Disability Income (annual)</con:property>
+          <con:property>2nd DI - Indexed</con:property>
+          <con:property>2nd DI - Premium Options</con:property>
+          <con:property>2nd DI - Payment Period</con:property>
+          <con:property>2nd DI - Waiting Period</con:property>
+          <con:property>2nd DI - Mental Health Limitation</con:property>
+          <con:property>Mortgage and Income Protection (annual)</con:property>
+          <con:property>MIP - Cover type</con:property>
+          <con:property>MIP - Benefit Payment Period</con:property>
+          <con:property>MIP - Indexed</con:property>
+          <con:property>MIP - Premium Options</con:property>
+          <con:property>MIP - Loading</con:property>
+          <con:property>MIP - Waiting Period</con:property>
+          <con:property>MIP - Mental Health Limitation</con:property>
+          <con:property>MIP - Redundancy Cover</con:property>
+          <con:property>Mortgage Instalment Insurance (annual)</con:property>
+          <con:property>MII - Benefit Payment Period</con:property>
+          <con:property>MII - Indexed</con:property>
+          <con:property>MII - Premium Options</con:property>
+          <con:property>MII - Loading</con:property>
+          <con:property>MII - Waiting Period</con:property>
+          <con:property>MII - Redundancy Cover</con:property>
+          <con:property>Retirement Protection (annual)</con:property>
+          <con:property>KS - Percentage of Salary</con:property>
+          <con:property>KS - loading</con:property>
+          <con:property>Bus. O'heads or KP (annual)</con:property>
+          <con:property>BO - Cover Type</con:property>
+          <con:property>BO - Claim Period</con:property>
+          <con:property>BO - Loading</con:property>
+          <con:property>BO - Indexed</con:property>
+          <con:property>BO - Premium Options</con:property>
+          <con:property>Essential Disability Income (annual)</con:property>
+          <con:property>EDI - Term</con:property>
+          <con:property>EDI - Indexed</con:property>
+          <con:property>EDI - Premium Options</con:property>
+          <con:property>EDI - Loading</con:property>
+          <con:property>Premium Waiver</con:property>
+          <con:property>WA - Wait</con:property>
+          <con:property>WA - Loading</con:property>
+          <con:property>WA - Term</con:property>
+          <con:property>Locum Cover (annual)</con:property>
+          <con:property>LC - Period</con:property>
+          <con:property>LC - Loading</con:property>
+          <con:property>LC - Indexed</con:property>
+          <con:property>LC - Premium Options</con:property>
+          <con:property>MajorCare</con:property>
+          <con:property>MAJ - Premium Payback</con:property>
+          <con:property>MAJ - Specialist Cover</con:property>
+          <con:property>MAJ - Excess</con:property>
+          <con:property>MAJ - Loading</con:property>
+          <con:property>MAJ - Child Cover</con:property>
+          <con:property>MAJ - youngest child's age</con:property>
+          <con:property>Health</con:property>
+          <con:property>Health - Loading</con:property>
+          <con:property>Health - Excess (Absolute only)</con:property>
+          <con:property>Health - Specialist cover (Absolute only)</con:property>
+          <con:property>Health - Child cover (Absolute only)</con:property>
+          <con:property>Health - Child specialist (Absolute only)</con:property>
+          <con:property>Health - Excess discount</con:property>
+          <con:property>TCM - S&amp;T</con:property>
+          <con:property>TCM Health - Loading</con:property>
+          <con:property>TCM Health - Child specialist cover</con:property>
+          <con:property>TCM Health - Excess discount</con:property>
+          <con:property>Start Up Income Protection (monthly)</con:property>
+          <con:property>Start Up Version</con:property>
+          <con:property>Start Up - Waiting Period</con:property>
+          <con:property>Start Up - Benefit Payment Period (months)</con:property>
+          <con:property>Start Up - Loading</con:property>
+          <con:property>Start Up - Waiver of premium (compulsory with Start Up)</con:property>
+          <con:property>BEP (monthly)</con:property>
+          <con:property>BEP - Waiting Period</con:property>
+          <con:property>BEP - Benefit Payment Period (months)</con:property>
+          <con:property>BEP - Benefit Expiry Age</con:property>
+          <con:property>BEP - Indexed</con:property>
+          <con:property>BEP - Premium Options</con:property>
+          <con:property>BEP - Loading</con:property>
+          <con:property>BEP - Cover Type (Selected, Assessed)</con:property>
+          <con:property>BEP - Capitalisation Benefit</con:property>
+          <con:property>BEP - Future Insurability - Main</con:property>
+          <con:property>BEP - Future Insurability - Cap Life</con:property>
+          <con:property>BEP - Future Insurability - Cap TPD</con:property>
+          <con:property>BEP - Future Insurability</con:property>
+          <con:property>BEP - Professional Services Benefit</con:property>
+          <con:property>Business Continuity (monthly)</con:property>
+          <con:property>BCV - Waiting Period</con:property>
+          <con:property>BCV - Benefit Payment Period (months)</con:property>
+          <con:property>BCV - Benefit Expiry Age</con:property>
+          <con:property>BCV - Indexed</con:property>
+          <con:property>BCV - Premium Options</con:property>
+          <con:property>BCV - Loading</con:property>
+          <con:property>BCV - Cover Type (Selected, Assessed)</con:property>
+          <con:property>BCV - Optional Partial Disablement Benefit</con:property>
+          <con:property>BCV - Employee Upgrade Benefit</con:property>
+          <con:property>BCV - Number of employees</con:property>
+          <con:property>Rural Continuity Benefit (annual)</con:property>
+          <con:property>RCV - Benefit Payment Period</con:property>
+          <con:property>RCV - DI Loading</con:property>
+          <con:property>RCV - Waiting Period</con:property>
+          <con:property>RCV - Optional Partial Disability</con:property>
+          <con:property>RCV - Optional Peak Season</con:property>
+          <con:property>RCV - Optional ACC</con:property>
+          <con:property>Private Health</con:property>
+          <con:property>PH - Loading</con:property>
+          <con:property>PH - Excess</con:property>
+          <con:property>PH - Specialist cover</con:property>
+          <con:property>PH - Specialist Excess</con:property>
+          <con:property>PH - Child cover (Number of lives aged &lt;20)</con:property>
+          <con:property>PH - Child specialist (Number of lives aged &lt;20)</con:property>
+          <con:property>Health Premium Waiver</con:property>
+          <con:property>PWH - Wait</con:property>
+          <con:property>PWH - Loading</con:property>
+          <con:property>PWH - Term</con:property>
+          <con:property>PWH - Premiums on other adult lives (same frequency!)</con:property>
+          <con:property>Accidental Injury Cover (monhly)</con:property>
+          <con:property>SINJ - Indexed</con:property>
+          <con:property>SINJ - Premium Options</con:property>
+          <con:property>HL</con:property>
+          <con:property>HM</con:property>
+          <con:property>HN</con:property>
+          <con:property>LIFE</con:property>
+          <con:property>Pol Fee</con:property>
+          <con:property>Total</con:property>
+          <con:property>Projections</con:property>
+          <con:property>Prem 1</con:property>
+          <con:property>Prem 2</con:property>
+          <con:property>Prem 3</con:property>
+          <con:property>Prem 4</con:property>
+          <con:property>Prem 5</con:property>
+          <con:property>Prem 6</con:property>
+          <con:property>Prem 7</con:property>
+          <con:property>Prem 8</con:property>
+          <con:property>Prem 9</con:property>
+          <con:property>Prem 10</con:property>
+          <con:property>Accum 1</con:property>
+          <con:property>Accum 2</con:property>
+          <con:property>Accum 3</con:property>
+          <con:property>Accum 4</con:property>
+          <con:property>Accum 5</con:property>
+          <con:property>Accum 6</con:property>
+          <con:property>Accum 7</con:property>
+          <con:property>Accum 8</con:property>
+          <con:property>Accum 9</con:property>
+          <con:property>Accum 10</con:property>
+          <con:startRow/>
+          <con:endRow/>
+          <con:recordsPerIteration>1</con:recordsPerIteration>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:trimValues>false</con:trimValues>
+          <con:entitizeValues>false</con:entitizeValues>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:expandProperties>false</con:expandProperties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="And i refine the data" id="203c9029-a876-4593-8db8-369b443fb64c">
+        <con:settings/>
+        <con:config>
+          <script>//convert value: NS == No, S == Yes
+def smoker = context.expand( '${When i input a user\'s information#Smoker}' ) as String
+testRunner.testCase.setPropertyValue("SMOKER", (smoker == 'NS') ?  "No" : "Yes")
+//convert value: 3+years == true, rest == false
+def selfEmployed = context.expand( '${When i input a user\'s information#Self Employed}' ) as String
+testRunner.testCase.setPropertyValue("SEGT3", (selfEmployed == '3+ years') ? "true" : "false")
+//convert value: M == Monthly, W == Weekly, F == Fortnightly, Y == Annual
+def premiumFrequency = context.expand( '${When i input a user\'s information#Premium Frequency}' ) as String
+def pF = ""
+switch(premiumFrequency)
+{
+	case "W":
+		pF = "Weekly";
+		break;
+	case "M":
+		pF = "Monthly";
+		break;
+	case "F":
+		pF = "Fortnightly";
+		break;
+	case "Y":
+		pF = "Yearly";
+		break;
+}
+testRunner.testCase.setPropertyValue("FREQUENCY", pF)
+//convert value: according to Occupational classes, only 5 is Unemployed
+def employedStatus = context.expand( '${When i input a user\'s information#Occupation Class}' ) as Integer
+testRunner.testCase.setPropertyValue("EMPLOYEDSTATUS", (employedStatus == 5) ? "Unemployed" : "Employed")
+//convert value: M == Male, F == Female
+def gender = context.expand( '${When i input a user\'s information#Sex}' ) as String
+testRunner.testCase.setPropertyValue("GENDER", (gender == 'M') ? "Male" : "Female")
+//convert value: M == Male, F == Female
+testRunner.testCase.setPropertyValue("LIFEINDEX", (context.expand( '${When i input a user\'s information#Life - Indexing}' ) == 'Y') ? "Yes" : "No")
+//convert value: 1 means 100
+def lifeLoading = context.expand( '${When i input a user\'s information#Life - Loading}' ) as Double
+testRunner.testCase.setPropertyValue("LOAD", (lifeLoading * 100).toString() )
+//convert Premium Opt
+//convert Review Term
+String _opt = ""
+String _term = ""
+def lifePremiumOptions = context.expand( '${When i input a user\'s information#Life - Premium Options}' ) as String
+switch(lifePremiumOptions)
+{
+	case ~/.*Term1-RFA.*/:
+		_opt = "Rate for Age"
+		_term = "1"
+		break
+	case~/.*Term10-.*/:
+		_opt = "10 Year"
+		_term = "10"
+		break
+	case~/.*Term65-.*/:
+		_opt = "To Age 65"
+		_term = "65"
+		break
+	case~/.*Term80-.*/:
+		_opt = "To Age 80"
+		_term = "80"
+		break
+	default:
+		_opt = "No Matched Options"
+		_term = "No Matched Term"
+}
+testRunner.testCase.setPropertyValue("PRE_OPT", _opt )
+testRunner.testCase.setPropertyValue("REVIEW_TERM", _term )</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="And i request products and benefits" id="47e5d8e4-4f12-4b1a-806d-f8a10b2ce0a0">
+        <con:settings/>
+        <con:config service="REST Service API" resourcePath="/quote/v1/products" methodName="Products Benefits" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="And i request products and benefits" id="f25fc231-4f07-4ce6-8b83-637e6f7b78f8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${And i extract the token#result}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "${#TestCase#QUOTENUMBER}",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "${#TestCase#LIFENUMBER}",
+          "Party": {
+            "FirstName": "${#TestCase#FIRSTNAME}",
+            "LastName": "${#TestCase#LASTNAME}",
+            "Age": "${When i input a user's information#Age}",
+            "BirthDate": "${#TestCase#THEDATE}",
+            "SmokerStatus": "${When i input a user's information#Smoker}",
+            "Gender": "${When i input a user's information#Sex}",
+            "OccupationClass": "${When i input a user's information#Occupation Class}",
+            "EmploymentStatus": "${#TestCase#EMPLOYEDSTATUS}",
+            "selfEmployedGT3Years": "${#TestCase#SEGT3}"
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0f94a17d-e310-4405-9593-e04c3e164817" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="88c37eea-57d2-41e3-bba5-d5cc89515368" name="Contains">
+              <con:configuration>
+                <token>"isAvailable" : true</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="And i get premium" id="2b5dcce5-2629-4d8a-8c3e-98873afda9be">
+        <con:settings/>
+        <con:config service="REST Service API" resourcePath="/quote/v1/calculate/premium" methodName="Calculate Premium" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="And i get premium" id="f25fc231-4f07-4ce6-8b83-637e6f7b78f8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${And i extract the token#result}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "${#TestCase#QUOTENUMBER}",
+    "PaymentFrequency": "${#TestCase#FREQUENCY}",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "${#TestCase#LIFENUMBER}",
+          "Party": {
+            "FirstName": "${#TestCase#FIRSTNAME}",
+            "LastName": "${#TestCase#LASTNAME}",
+            "Age": "${When i input a user's information#Age}",
+            "BirthDate": "${#TestCase#THEDATE}",
+            "SmokerStatus": "${#TestCase#SMOKER}",
+            "Gender": "${#TestCase#GENDER}",
+            "OccupationClass": "${When i input a user's information#Occupation Class}",
+            "EmploymentStatus": "${#TestCase#EMPLOYEDSTATUS}",
+            "selfEmployedGT3Years": "${#TestCase#SEGT3}"
+          }
+        },
+        "Products": {
+          "Product": {
+            "ProductName": "TotalCare Max Personal",
+            "ProductCode": "${And i request products and benefits#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductCode']}",
+            "Channel": "${And i request products and benefits#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['Channel']}",
+            "ProductBenefits": {
+              "ProductBenefit": {
+                "BenefitName": "${And i request products and benefits#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['BenefitName']}",
+                "PremiumOption": "${#TestCase#PRE_OPT}",
+                "SumAssured": "${When i input a user's information#Life Cover}",
+                "ReviewTerm": "${#TestCase#REVIEW_TERM}",
+                "Load": "${#TestCase#LOAD}",
+                "BenefitCode": "${And i request products and benefits#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['BenefitCode']}",
+                "BenefitType": "${And i request products and benefits#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['BenefitType']}",
+                "LoadingPerMille": "${When i input a user's information#Life - Loading per mille}",
+                "LoadingTerm": "${When i input a user's information#Life - Loading term}",
+                "isIndexed": "${#TestCase#LIFEINDEX}",
+                "CommissionFactor": "${When i input a user's information#Commission Adjustment}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0f94a17d-e310-4405-9593-e04c3e164817" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="3ae94a3a-fd21-482f-837d-d04066fbe8b2" name="JsonPath Match">
+              <con:configuration>
+                <path>$['Quote']['TotalPremium']</path>
+                <content>*</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="And i compare results" id="146f0245-11a8-41aa-82cb-74e0977cb0ae">
+        <con:settings/>
+        <con:config>
+          <script>def _api = context.expand( '${And i get premium#Response#$[\'Quote\'][\'TotalPremium\']}' ) as float
+def _sheet = context.expand( '${When i input a user\'s information#LIFE}' ) as float
+
+def _diff = Math.abs(_api-_sheet)
+def _diff_rate = Math.round(_diff / _sheet * 10000) / 100
+def _diff_round = Math.round(_diff * 100) / 100
+testRunner.testCase.setPropertyValue("DIFF", (_diff_round).toString())
+
+String str = _diff ? _diff_rate.toString() + '%' : _diff_rate.toString()
+if (_diff &amp;&amp; !_diff_rate) str = '&lt;0.01%'
+testRunner.testCase.setPropertyValue("DIFF_RATE", str)
+
+testRunner.testCase.setPropertyValue("PASS", _diff_round &lt;= 0.01 ? "YES" : "NO")</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Then i get test report and save to file" id="368b2ced-c40d-4190-ade3-407a9f9c94be">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file>./Results/End-to-end.template.xlsx</file>
+              <outfile>./Results/End-to-end.xlsx</outfile>
+              <worksheet>API</worksheet>
+              <cell>A2</cell>
+              <evaluateFormulas>true</evaluateFormulas>
+            </con:configuration>
+          </con:dataSink>
+          <con:shared>true</con:shared>
+          <con:properties>
+            <con:property>
+              <con:name>Age</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['PartyRoleDetails']['Party']['Age']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Sex</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['PartyRoleDetails']['Party']['Gender']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Smoker</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['PartyRoleDetails']['Party']['SmokerStatus']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Occupation Class</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['PartyRoleDetails']['Party']['OccupationClass']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Self EmployedGT3</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['PartyRoleDetails']['Party']['selfEmployedGT3Years']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Premium Frequency</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PaymentFrequency']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Commission Adjustment</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['CommissionFactor']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life Cover</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['SumAssured']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life - Indexing</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['isIndexed']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life - Premium Options</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['PremiumOption']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life - Loading</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['Load']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life - Loading per mille</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['LoadingPerMille']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Life - Loading term</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['PartyRolesInQuote']['PartyRoleInQuote'][0]['Products']['Product'][0]['ProductBenefits']['ProductBenefit'][0]['LoadingTerm']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>LIFE</con:name>
+              <con:value>${When i input a user's information#LIFE}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>API Total</con:name>
+              <con:value>${And i get premium#Response#$['Quote']['TotalPremium']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Eror</con:name>
+              <con:value>${#TestCase#DIFF}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Rate</con:name>
+              <con:value>${#TestCase#DIFF_RATE}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Pass</con:name>
+              <con:value>${#TestCase#PASS}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="52c70d11-96b3-41dc-8aa2-c820f0997e5a">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>When i input a user's information</dataSourceStep>
+          <targetStep>And i refine the data</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Then i highlight the case that faild" id="be1e5ef1-7a7e-436e-b1bd-35313b41344e">
+        <con:settings/>
+        <con:config>
+          <script>Runtime.getRuntime().exec( "cscript C:/Users/DEV.WeiH/Desktop/WebAPI.scripts/Results/script.vbs" )</script>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>SCOPE</con:name>
+          <con:value>SOV.Adviser.ValidateEmail</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ACCESS_TOKEN</con:name>
+          <con:value>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6IjFya2NlVk9zMXp6a1NuWjA1V3dUTnFzcmRKbyIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiI0MTAxY2JmY2VkOTA0OTAzOGY4YThmNzBlMDhhZmRiYiIsImlzcyI6InNzby5kZXYuc292Y2xvdWQuc292ZXJlaWduLmNvLm56Iiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJBUElTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUyNTEzMTE1NSwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiQ2xpZW50SUQiLCJleHAiOjE1MjUxMzQ3NTUsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwicHJuIjoiNDEwMWNiZmNlZDkwNDkwMzhmOGE4ZjcwZTA4YWZkYmIiLCJqdGkiOiI4NzIwYjg5Yi01ODMzLTRhMTUtYTRlOC02NzYyNTkxNzE0NjEiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IjQxMDFjYmZjZWQ5MDQ5MDM4ZjhhOGY3MGUwOGFmZGJiIiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiU09WLkFkdmlzZXIuVmFsaWRhdGVFbWFpbCIsInVzZXIudGVuYW50Lm5hbWUiOiJBUEkiLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6ImNhZmUwNmJjLThkODUtNGIwOC04MmVkLTBiZWE0YmQ0NDM3NSJ9.Y-CrM1ZkaFq-9U6f0dsla-a-_J_KwMlmHO6GkWeaT-vJoZ2m6WjRWbCO2WMbE2juNELBfn28Lo_utSV2W2thK3xjxJm68FGG4DppS4GK732ECeXW20mDgHFc9gNRCJwPYkZMlrxtXaJ0lSM2EyzOyfw8ZmWLLYgNlc9UqV7OR8E</con:value>
+        </con:property>
+        <con:property>
+          <con:name>THEDATE</con:name>
+          <con:value>01/05/18</con:value>
+        </con:property>
+        <con:property>
+          <con:name>SMOKER</con:name>
+          <con:value>Yes</con:value>
+        </con:property>
+        <con:property>
+          <con:name>SEGT3</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>FREQUENCY</con:name>
+          <con:value>Monthly</con:value>
+        </con:property>
+        <con:property>
+          <con:name>QUOTENUMBER</con:name>
+          <con:value>12345</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LIFENUMBER</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>FIRSTNAME</con:name>
+          <con:value>John</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LASTNAME</con:name>
+          <con:value>DOE</con:value>
+        </con:property>
+        <con:property>
+          <con:name>EMPLOYEDSTATUS</con:name>
+          <con:value>Unemployed</con:value>
+        </con:property>
+        <con:property>
+          <con:name>GENDER</con:name>
+          <con:value>Female</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LIFEINDEX</con:name>
+          <con:value>Yes</con:value>
+        </con:property>
+        <con:property>
+          <con:name>LOAD</con:name>
+          <con:value>200.0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PASS</con:name>
+          <con:value>YES</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DIFF</con:name>
+          <con:value>0.01</con:value>
+        </con:property>
+        <con:property>
+          <con:name>DIFF_RATE</con:name>
+          <con:value>&lt;0.01%</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PRE_OPT</con:name>
+          <con:value>To Age 80</con:value>
+        </con:property>
+        <con:property>
+          <con:name>REVIEW_TERM</con:name>
+          <con:value>80</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>bd064a5b-5a83-40d7-b821-b7cc24b6cbdd</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>52c70d11-96b3-41dc-8aa2-c820f0997e5a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>203c9029-a876-4593-8db8-369b443fb64c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>368b2ced-c40d-4190-ade3-407a9f9c94be</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>146f0245-11a8-41aa-82cb-74e0977cb0ae</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2979d739-e915-4730-ae7f-ca2b4fd2b29a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>ddd93388-12a3-4b8f-abfb-160f3814925b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c1e2082e-c3cb-4364-87be-74c461ef9ce2</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>47e5d8e4-4f12-4b1a-806d-f8a10b2ce0a0</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b5dcce5-2629-4d8a-8c3e-98873afda9be</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>be1e5ef1-7a7e-436e-b1bd-35313b41344e</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="0d52ad4a-bbcf-408d-888d-e28c814e73fe" name="Components">
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="dfb70678-5b4e-4b21-9bb6-0cf2a6d5a773" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Products Benefits(DEV)" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Given i request an access token" id="a89451be-1d1b-4ce2-8301-4f46c9ec9c59">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Given i request an access token" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=client_credentials&amp;scope=${#TestCase#SCOPE}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="52e9ab2f-67ce-4043-8ace-7b73b1129dcc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="And i extract the token" id="6f742960-2458-403e-b445-9c9e8b6bc07b">
+        <con:settings/>
+        <con:config>
+          <script>def accessToken = context.expand('${Given i request an access token#Response#$.access_token}')
+def tokenType = context.expand( '${Given i request an access token#Response#$[\'token_type\']}' )
+testRunner.testCase.setPropertyValue("ACCESS_TOKEN", accessToken)
+return tokenType + ' ' + accessToken</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="And the token is valid" id="e0e375c2-1c27-49cc-8de4-1547d6a6941a">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="And the token is valid" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=oracle-idm%3A%2Foauth%2Fgrant-type%2Fresource-access-token%2Fjwt&amp;oracle_token_action=validate&amp;scope=${#TestCase#SCOPE}&amp;assertion=${#TestCase#ACCESS_TOKEN}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="bf7717e8-d725-40e5-9ed7-98fea999cbcf" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="49949dbe-4baa-4c1e-930a-71ed8aa0c894" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$['successful']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="When i request with an existing infomation" id="84327864-9b40-4307-bfbb-ac71e6d3fbb5">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>./Data/Book1.xlsx</file>
+              <worksheet/>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>QuoteNumber</con:property>
+          <con:property>LifeNumber</con:property>
+          <con:property>FirstName</con:property>
+          <con:property>LastName</con:property>
+          <con:property>Age</con:property>
+          <con:property>BirthDate</con:property>
+          <con:property>SmokerStatus</con:property>
+          <con:property>Gender</con:property>
+          <con:property>OccupationClass</con:property>
+          <con:property>EmploymentStatus</con:property>
+          <con:property>selfEmployedGT3Years</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Then i see the response as expected" id="7d68d13f-c408-4340-aed1-6c7698c38d80">
+        <con:settings/>
+        <con:config service="REST Service API" resourcePath="/quote/v1/products" methodName="Products Benefits" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Then i see the response as expected" id="f25fc231-4f07-4ce6-8b83-637e6f7b78f8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${And i extract the token#result}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "${When i request with an existing infomation#QuoteNumber}",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "${When i request with an existing infomation#LifeNumber}",
+          "Party": {
+            "FirstName": "${When i request with an existing infomation#FirstName}",
+            "LastName": "${When i request with an existing infomation#LastName}",
+            "Age": "${When i request with an existing infomation#Age}",
+            "BirthDate": "${When i request with an existing infomation#BirthDate}",
+            "SmokerStatus": "${When i request with an existing infomation#SmokerStatus}",
+            "Gender": "${When i request with an existing infomation#Gender}",
+            "OccupationClass": "${When i request with an existing infomation#OccupationClass}",
+            "EmploymentStatus": "${When i request with an existing infomation#EmploymentStatus}",
+            "selfEmployedGT3Years": "${When i request with an existing infomation#selfEmployedGT3Years}"
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0f94a17d-e310-4405-9593-e04c3e164817" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="985b2915-0d76-4040-8414-55c050031382" name="JsonPath Match">
+              <con:configuration>
+                <path>$['Quote']['PartyRolesInQuote'][0]['PartyRoleInQuote']['Products'][0]['Product']['ProductBenefits'][0]['ProductBenefit']['isAvailable']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="c889150b-515f-4b14-bd34-74a44e7d835c">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>When i request with an existing infomation</dataSourceStep>
+          <targetStep>Then i see the response as expected</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>SCOPE</con:name>
+          <con:value>SOV.Adviser.ValidateEmail</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ACCESS_TOKEN</con:name>
+          <con:value>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6IjFya2NlVk9zMXp6a1NuWjA1V3dUTnFzcmRKbyIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiI0MTAxY2JmY2VkOTA0OTAzOGY4YThmNzBlMDhhZmRiYiIsImlzcyI6InNzby5kZXYuc292Y2xvdWQuc292ZXJlaWduLmNvLm56Iiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJBUElTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUyNDQzNjE0Nywib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiQ2xpZW50SUQiLCJleHAiOjE1MjQ0Mzk3NDcsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwicHJuIjoiNDEwMWNiZmNlZDkwNDkwMzhmOGE4ZjcwZTA4YWZkYmIiLCJqdGkiOiIzYWM5Y2EyNS01OTI3LTQ4ZTEtOWY1MS1lNWMyNjQyNjkwNDgiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IjQxMDFjYmZjZWQ5MDQ5MDM4ZjhhOGY3MGUwOGFmZGJiIiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiU09WLkFkdmlzZXIuVmFsaWRhdGVFbWFpbCIsInVzZXIudGVuYW50Lm5hbWUiOiJBUEkiLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6ImNhZmUwNmJjLThkODUtNGIwOC04MmVkLTBiZWE0YmQ0NDM3NSJ9.A0M1OERif2SOvB9yCm1RjyxnxEsMQYkfWrWcAdgngNJU9xsw_CVlt_gWafKpNKcmO5dsuDelpGHbmeiOUFV4-1RlIDHFuLjFGdAqEJTljStzyLHmnrmx2LY3-Jnienhum_MsS8w9NF5kb0d-XQo6QT3iPDmJY0Nv1I39iyYDCa4</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>7d68d13f-c408-4340-aed1-6c7698c38d80</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a89451be-1d1b-4ce2-8301-4f46c9ec9c59</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>6f742960-2458-403e-b445-9c9e8b6bc07b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>e0e375c2-1c27-49cc-8de4-1547d6a6941a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>84327864-9b40-4307-bfbb-ac71e6d3fbb5</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c889150b-515f-4b14-bd34-74a44e7d835c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="01d1f55b-1b5c-4ea0-98e4-a07a30eab61a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Calculate Premium(DEV)" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Given i request an access token" id="eae1fb39-bdf5-4d80-bf26-6afabef0fd31">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Given i request an access token" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=client_credentials&amp;scope=${#TestCase#SCOPE}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="52e9ab2f-67ce-4043-8ace-7b73b1129dcc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="And i extract the token" id="da481c35-db8b-453a-a56c-4805c45e2a6b">
+        <con:settings/>
+        <con:config>
+          <script>def accessToken = context.expand('${Given i request an access token#Response#$.access_token}')
+def tokenType = context.expand( '${Given i request an access token#Response#$[\'token_type\']}' )
+testRunner.testCase.setPropertyValue("ACCESS_TOKEN", accessToken)
+return tokenType + ' ' + accessToken</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="And the token is valid" id="ed973562-9c21-469c-951b-6d2db1aa0c02">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens" methodName="RequestToken" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="And the token is valid" id="95c2c6d8-a4ae-4650-8042-e1235a37a39f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://sso.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>grant_type=oracle-idm%3A%2Foauth%2Fgrant-type%2Fresource-access-token%2Fjwt&amp;oracle_token_action=validate&amp;scope=${#TestCase#SCOPE}&amp;assertion=${#TestCase#ACCESS_TOKEN}</con:request>
+            <con:originalUri>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="bf7717e8-d725-40e5-9ed7-98fea999cbcf" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="49949dbe-4baa-4c1e-930a-71ed8aa0c894" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$['successful']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>4101cbfced9049038f8a8f70e08afdbb</con:username>
+              <con:password>2C449kwEGO</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:preemptive>true</con:preemptive>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Preemptive</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="When i request with an existing infomation" id="f29d117e-44a6-491e-8dd9-b500a51f7d5c">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>./Data/Book1.xlsx</file>
+              <worksheet/>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>QuoteNumber</con:property>
+          <con:property>LifeNumber</con:property>
+          <con:property>FirstName</con:property>
+          <con:property>LastName</con:property>
+          <con:property>Age</con:property>
+          <con:property>BirthDate</con:property>
+          <con:property>SmokerStatus</con:property>
+          <con:property>Gender</con:property>
+          <con:property>OccupationClass</con:property>
+          <con:property>EmploymentStatus</con:property>
+          <con:property>selfEmployedGT3Years</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Then i see the response as expected" id="5d1ec9f0-c04c-44b0-8395-c9742816d54a">
+        <con:settings/>
+        <con:config service="REST Service API" resourcePath="/quote/v1/calculate/premium" methodName="Calculate Premium" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Then i see the response as expected" id="f25fc231-4f07-4ce6-8b83-637e6f7b78f8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${And i extract the token#result}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.dev.sovcloud.sovereign.co.nz</con:endpoint>
+            <con:request>{
+  "Quote": {
+    "QuoteNumber": "${When i request with an existing infomation#QuoteNumber}",
+    "PaymentFrequency": "Weekly",
+    "PartyRolesInQuote": {
+      "PartyRoleInQuote": {
+        "PartyRoleDetails": {
+          "LifeNumber": "${When i request with an existing infomation#LifeNumber}",
+          "Party": {
+            "FirstName": "${When i request with an existing infomation#FirstName}",
+            "LastName": "${When i request with an existing infomation#LastName}",
+            "Age": "${When i request with an existing infomation#Age}",
+            "BirthDate": "${When i request with an existing infomation#BirthDate}",
+            "SmokerStatus": "false",
+            "Gender": "Female",
+            "OccupationClass": "${When i request with an existing infomation#OccupationClass}",
+            "EmploymentStatus": "${When i request with an existing infomation#EmploymentStatus}",
+            "selfEmployedGT3Years": "${When i request with an existing infomation#selfEmployedGT3Years}"
+          }
+        },
+        "Products": {
+          "Product": {
+            "ProductName": "TotalCare Max Personal",
+            "ProductCode": "TCMP",
+            "Channel": "SOVHUB",
+            "ProductBenefits": {
+              "ProductBenefit": {
+                "BenefitName": "Life Cover",
+                "PremiumOption": "Rate for Age",
+                "SumAssured": "300000",
+                "ReviewTerm": "10",
+                "Load": "1000",
+                "BenefitCode": "LC",
+                "BenefitType": "Life",
+                "LoadingPerMille": "0.1",
+                "LoadingTerm": "1",
+                "isIndexed": "true",
+                "CommissionFactor": "0.7"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</con:request>
+            <con:originalUri>https://api.dev.sovcloud.sovereign.co.nz/quote/v1/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0f94a17d-e310-4405-9593-e04c3e164817" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="3ae94a3a-fd21-482f-837d-d04066fbe8b2" name="JsonPath Match">
+              <con:configuration>
+                <path>$['Quote']['TotalPremium']</path>
+                <content>*</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="e71c26da-fd86-4ab3-9918-dfac4b0db747">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>When i request with an existing infomation</dataSourceStep>
+          <targetStep>Then i see the response as expected</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>SCOPE</con:name>
+          <con:value>SOV.Adviser.ValidateEmail</con:value>
+        </con:property>
+        <con:property>
+          <con:name>ACCESS_TOKEN</con:name>
+          <con:value>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6IjFya2NlVk9zMXp6a1NuWjA1V3dUTnFzcmRKbyIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiI0MTAxY2JmY2VkOTA0OTAzOGY4YThmNzBlMDhhZmRiYiIsImlzcyI6InNzby5kZXYuc292Y2xvdWQuc292ZXJlaWduLmNvLm56Iiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJBUElTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUyNDQ0NjE5MCwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiQ2xpZW50SUQiLCJleHAiOjE1MjQ0NDk3OTAsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwicHJuIjoiNDEwMWNiZmNlZDkwNDkwMzhmOGE4ZjcwZTA4YWZkYmIiLCJqdGkiOiIyZDk3MzdkYi1hNTFhLTQ3MWUtYTdiNi0yNzBjY2ZmZTFkMjQiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IjQxMDFjYmZjZWQ5MDQ5MDM4ZjhhOGY3MGUwOGFmZGJiIiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiU09WLkFkdmlzZXIuVmFsaWRhdGVFbWFpbCIsInVzZXIudGVuYW50Lm5hbWUiOiJBUEkiLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6ImNhZmUwNmJjLThkODUtNGIwOC04MmVkLTBiZWE0YmQ0NDM3NSJ9.NhfNpSs1u0Xip8c7-oirKc_87DZGJ2TiA97pMPq6lOen3qHRYqvSukyfkcUKRWal7wSASqNL32GNrhzyZ4GWrGhz3vX_wm_QXxnaIt4iC6PZf0sH_XBTh_aGb-JA28iGfqANor6_WdPGugVNwagK_MqsaykrZtpSzrz2JWy5k5o</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>7d68d13f-c408-4340-aed1-6c7698c38d80</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a89451be-1d1b-4ce2-8301-4f46c9ec9c59</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>6f742960-2458-403e-b445-9c9e8b6bc07b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>e0e375c2-1c27-49cc-8de4-1547d6a6941a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>Profile</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>authProfile</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenURI>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:accessTokenURI>
+      <con:accessToken>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6IjFya2NlVk9zMXp6a1NuWjA1V3dUTnFzcmRKbyIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiI0MTAxY2JmY2VkOTA0OTAzOGY4YThmNzBlMDhhZmRiYiIsImlzcyI6InNzby5kZXYuc292Y2xvdWQuc292ZXJlaWduLmNvLm56Iiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJBUElTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUyNTEyMjg3NCwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiQ2xpZW50SUQiLCJleHAiOjE1MjUxMjY0NzQsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwicHJuIjoiNDEwMWNiZmNlZDkwNDkwMzhmOGE4ZjcwZTA4YWZkYmIiLCJqdGkiOiI1NjBlY2JiOC00OWY4LTQ1MTYtYWFjYi0wNDcyOGFhZDYxZGMiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IjQxMDFjYmZjZWQ5MDQ5MDM4ZjhhOGY3MGUwOGFmZGJiIiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiU09WLkFkdmlzZXIuVmFsaWRhdGVFbWFpbCIsInVzZXIudGVuYW50Lm5hbWUiOiJBUEkiLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6ImNhZmUwNmJjLThkODUtNGIwOC04MmVkLTBiZWE0YmQ0NDM3NSJ9.Xokk6xG2GsZoMvbqQPqX-kVBqpRppLVmUet792OZfqPo7E5ekAP_NxJV1JMjM8qoxVR6jeRuxX_3RruX_4ctAhGWyOwrxTfuC_IyFdXfb91gzStT1h2ZM6MrwYuhwCxwYSmPmZGqR4HimysLD9ZfT-wOPosne9xhtUnndJUQnRc</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:manualAccessTokenExpirationTime/>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:clientID/>
+      <con:clientSecret/>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>SOV.Adviser.ValidateEmail</con:scope>
+      <con:useAuthHeader>false</con:useAuthHeader>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:authRepository>
+    <con:oAuth20AuthEntry>
+      <con:name>Profile</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>authProfile</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenURI>https://sso.dev.sovcloud.sovereign.co.nz/ms_oauth/oauth2/endpoints/APIserviceprofile/tokens</con:accessTokenURI>
+      <con:accessToken>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6IjFya2NlVk9zMXp6a1NuWjA1V3dUTnFzcmRKbyIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiI0MTAxY2JmY2VkOTA0OTAzOGY4YThmNzBlMDhhZmRiYiIsImlzcyI6InNzby5kZXYuc292Y2xvdWQuc292ZXJlaWduLmNvLm56Iiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJBUElTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUyNTEyMjg3NCwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiQ2xpZW50SUQiLCJleHAiOjE1MjUxMjY0NzQsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwicHJuIjoiNDEwMWNiZmNlZDkwNDkwMzhmOGE4ZjcwZTA4YWZkYmIiLCJqdGkiOiI1NjBlY2JiOC00OWY4LTQ1MTYtYWFjYi0wNDcyOGFhZDYxZGMiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IjQxMDFjYmZjZWQ5MDQ5MDM4ZjhhOGY3MGUwOGFmZGJiIiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiU09WLkFkdmlzZXIuVmFsaWRhdGVFbWFpbCIsInVzZXIudGVuYW50Lm5hbWUiOiJBUEkiLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6ImNhZmUwNmJjLThkODUtNGIwOC04MmVkLTBiZWE0YmQ0NDM3NSJ9.Xokk6xG2GsZoMvbqQPqX-kVBqpRppLVmUet792OZfqPo7E5ekAP_NxJV1JMjM8qoxVR6jeRuxX_3RruX_4ctAhGWyOwrxTfuC_IyFdXfb91gzStT1h2ZM6MrwYuhwCxwYSmPmZGqR4HimysLD9ZfT-wOPosne9xhtUnndJUQnRc</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:manualAccessTokenExpirationTime/>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:clientID/>
+      <con:clientSecret/>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>SOV.Adviser.ValidateEmail</con:scope>
+      <con:useAuthHeader>false</con:useAuthHeader>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+  </con:authRepository>
+  <con:tags/>
+</con:soapui-project>
